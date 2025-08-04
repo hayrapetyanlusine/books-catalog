@@ -1,0 +1,15 @@
+<div class="book-details">
+  <h1>Детали книги</h1>
+
+  <p><strong>Автор:</strong> {{ book().author }}</p>
+  <p><strong>Год издания:</strong> {{ book().year }}</p>
+  <p><strong>Язык:</strong> {{ book().language }}</p>
+  <p><strong>Количество страниц:</strong> {{ book().pages }}</p>
+
+  <mat-card-actions>
+    <button mat-raised-button color="primary" [routerLink]="['/']">
+      <mat-icon>arrow_back</mat-icon>
+      Вернуться к каталогу
+    </button>
+  </mat-card-actions>
+</div>

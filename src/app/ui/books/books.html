@@ -1,0 +1,10 @@
+
+<h1>Каталог книг</h1>
+
+<app-search (searchChange)="onSearchChange($event)"/>
+
+<div class="books-wrapper">
+  @for(book of filteredBooks(); track book.id) {
+    <app-book-item [book]="book" />
+  }
+</div>

@@ -1,0 +1,42 @@
+<h2 class="form-title">Добавить книгу</h2>
+
+<form [formGroup]="bookForm" class="book-form" (ngSubmit)="onSubmit()">
+  <div class="form-row">
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Название книги</mat-label>
+      <input matInput formControlName="title" placeholder="Введите название книги">
+    </mat-form-field>
+  </div>
+
+  <div class="form-row">
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Автор</mat-label>
+      <input matInput formControlName="author" placeholder="Введите имя автора">
+    </mat-form-field>
+  </div>
+
+  <div class="form-row two-columns">
+    <mat-form-field appearance="outline">
+      <mat-label>Год издания</mat-label>
+      <input matInput type="number" formControlName="year" placeholder="2024">
+    </mat-form-field>
+  </div>
+
+  <div class="form-row two-columns">
+    <mat-form-field appearance="outline">
+      <mat-label>Количество страниц *</mat-label>
+      <input matInput type="number" formControlName="pages" placeholder="300">
+    </mat-form-field>
+  </div>
+
+  <div class="form-row">
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Язык</mat-label>
+      <input matInput formControlName="language" placeholder="Введите язык книги">
+    </mat-form-field>
+  </div>
+
+  <div class="form-row">
+    <button mat-raised-button color="primary" type="submit" [disabled]="bookForm.invalid">Добавить книгу</button>
+  </div>
+</form>

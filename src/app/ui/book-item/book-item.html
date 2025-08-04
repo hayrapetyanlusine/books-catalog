@@ -1,0 +1,8 @@
+<mat-card class="book-card" [routerLink]="['/book', book().id]">
+  <mat-card-header>
+    <h3 class="book-title">{{ book().title }}</h3>
+  </mat-card-header>
+  <mat-card-content>
+    <p class="book-author">{{ book().author }}</p>
+  </mat-card-content>
+</mat-card>
