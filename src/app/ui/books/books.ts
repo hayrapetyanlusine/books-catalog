@@ -13,7 +13,6 @@ import { Search } from '../search/search';
 export class Books {
   private readonly booksCatalog = inject(BooksCatalog);
 
-  // public booksOfCatalog = signal(this.booksCatalog.getBooks());
   public searchText = signal('');
 
   public filteredBooks = computed(() => {

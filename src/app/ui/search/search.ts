@@ -36,7 +36,6 @@ export class Search {
       takeUntilDestroyed(this.destroyRef)
     )
     .subscribe((value) => {
-      // this.booksCatalog.search(value);
       this.searchChange.emit(value);
     });
 }
